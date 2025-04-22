@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artisan Adornments - Royal Collection</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="top-bar">
+      <div class="container">
+        <div class="contact-info">
+          <span><i class="fas fa-phone-alt"></i> +91 861 999 9198</span>
+          <span><i class="fas fa-envelope"></i> support@artisanadornments.com</span>
+        </div>
+        <div class="user-links">
+          <a href="#" class="wishlist-link" id="wishlist-toggle-nav">
+            <i class="fas fa-heart"></i> Wishlist
+            <span class="wishlist-counter" id="wishlist-counter">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="main-header">
+      <div class="container">
+        <a href="#" class="logo">Artisan Adornments</a>
+        <div class="search-bar">
+          <button type="button" id="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+          <input type="text" id="search-input" placeholder="Search by name or tags..." aria-label="Search products">
+        </div>
+      </div>
+    </div>
+    <div class="decorative-border"></div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Elegance in <span>Traditional</span> Craftsmanship</h1>
+        <p>Discover our exquisite collection of premium spiritual adornments, handcrafted with devotion and tradition.</p>
+        <a href="#products" class="hero-btn">Explore Collection</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Filter -->
+  <section class="category-filter">
+    <div class="container">
+      <h2 class="section-title">Browse Categories</h2>
+      <div class="category-buttons" id="category-filter">
+        <!-- Categories will be populated by JavaScript -->
+        <button class="category-btn active" data-category="all">All Items</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wishlist Section -->
+  <section class="wishlist-section" id="wishlist-section" style="display: none;">
+    <div class="container">
+      <div class="section-header">
+        <div class="header-line"></div>
+        <h2>Your Wishlist</h2>
+        <div class="header-line"></div>
+      </div>
+      <button id="wishlist-toggle" class="wishlist-toggle"><i class="fas fa-heart-broken"></i> Hide Wishlist</button>
+      <div id="wishlist-products">
+        <!-- Wishlist products will be populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="featured-products" id="featured">
+    <div class="container">
+      <div class="section-header">
+        <div class="header-line"></div>
+        <h2>Featured Treasures</h2>
+        <div class="header-line"></div>
+      </div>
+      <div class="products-grid" id="featured-products">
+        <!-- Featured products will be populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- All Products Section -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <div class="header-line"></div>
+        <h2>Our Collection</h2>
+        <div class="header-line"></div>
+      </div>
+      <div id="products-container">
+        <!-- Products will be populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Feed -->
+  <section class="instagram-feed">
+    <div class="container">
+      <h2>Follow Our Journey</h2>
+      <p>Discover the stories behind our craftsmanship</p>
+      <div class="instagram-grid">
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1583309219838-a94aa566a1d0?q=80&w=800" alt="Handcrafted jewelry">
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1610809027249-86c649feacd5?q=80&w=800" alt="Traditional saree">
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1598931247655-f0f497164882?q=80&w=800" alt="Spiritual items">
+        </div>
+        <div class="instagram-item">
+          <img src="https://images.unsplash.com/photo-1629111069911-431934b207c7?q=80&w=800" alt="Handcrafted decorations">
+        </div>
+      </div>
+      <div class="instagram-link">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i> @artisanadornments
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-container">
+        <div class="contact-form">
+          <h2>Get in Touch</h2>
+          <form id="contact-form">
+            <div class="form-group">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" id="message" name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <h2>Visit Us</h2>
+          <div class="info-item">
+            <p class="info-title">Store Address:</p>
+            <p class="info-content">123 Devotional Lane, Spiritual District<br>Karnataka, India - 560001</p>
+          </div>
+          <div class="info-item">
+            <p class="info-title">Open Hours:</p>
+            <p class="info-content">Monday - Saturday: 10:00 AM to 8:00 PM<br>Sunday: 11:00 AM to 6:00 PM</p>
+          </div>
+          <div class="info-item">
+            <p class="info-title">Contact:</p>
+            <p class="info-content">Phone: +91 861 999 9198<br>Email: support@artisanadornments.com</p>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Artisan Adornments</h3>
+          <p>Celebrating the richness of traditional craftsmanship and spiritual artifacts with premium quality products.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#featured">Featured Items</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Categories</h3>
+          <ul id="footer-categories">
+            <!-- Categories will be populated by JavaScript -->
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">&copy; <span id="current-year"></span> Artisan Adornments. All rights reserved.</p>
+        <div class="payment-methods">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-amex"></i>
+          <i class="fab fa-cc-paypal"></i>
+          <i class="fab fa-google-pay"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/918619999198" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Toast Container for Notifications -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- JavaScript -->
+  <script src="scripts.js"></script>
+</body>
+</html>
